@@ -341,3 +341,16 @@ body {
     height: 320px;
   }
 }
+/* --- Landing text sizing (match the “second image” vibe) --- */
+#landing .title{
+  font-size: clamp(44px, 6vw, 78px);
+  line-height: 1.05;
+  margin-bottom: 10px;
+}
+
+#landing .subtitle{
+  font-size: clamp(18px, 2.2vw, 26px);
+  line-height: 1.55;
+  margin: 10px 0;
+  opacity: 0.92;
+}
