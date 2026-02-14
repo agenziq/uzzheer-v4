@@ -49,24 +49,7 @@ body {
 .handwriting {
   font-family: "Brush Script MT", "Comic Sans MS", cursive;
   display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid rgba(255, 255, 255, 0.8);
-  width: 0;
-  animation: writeName 2.4s steps(8, end) forwards, blink 0.65s step-end infinite;
   filter: drop-shadow(0 0 10px rgba(255, 210, 240, 0.9));
-}
-
-@keyframes writeName {
-  to {
-    width: 4.6ch;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
 }
 
 .heart {
