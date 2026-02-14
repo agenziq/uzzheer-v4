@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heer ❤️ Uzzii</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section id="landing" class="screen active">
+        <h1 class="title">
+          <span class="handwriting">Heer</span>
+          <span class="heart">❤️</span>
+          <span>Uzzii</span>
+        </h1>
+        <p class="subtitle">Hey Heer, I made this for you</p>
+        <p class="subtitle">Will you be my valentine?</p>
+        <p class="subtitle">I dare you to click No....if you can</p>
+
+        <div id="arena" class="arena" aria-label="Love choice arena">
+          <div id="arenaMessage" class="arena-message" aria-live="polite">
+            Choose wisely, meri jaan 💫
+          </div>
+          <div id="buttonLayer" class="button-layer">
+            <button id="yesBtn" class="btn yes-btn" type="button">Yes 💖</button>
+            <button id="noBtn" class="btn no-btn" type="button">No 🙈</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="finalSection" class="screen final-section" aria-live="polite">
+        <article class="love-card">
+          <img src="assets/couple.png" alt="Heer and Uzzii" class="couple-image" />
+          <p class="final-message">
+            I miss you so, so much. Even with this long distance between us right now, my heart feels closest to you every single day. We will be together very soon, and I cannot wait for all our hugs, laughs, and little moments that make life beautiful. I love you endlessly, Heer. Forever your Uzzii. 💞
+          </p>
+          <button id="memeBtn" class="btn meme-btn" type="button">Drop a cute meme line 😭</button>
+          <p id="memeOutput" class="meme-output" aria-live="polite"></p>
+        </article>
+      </section>
+    </main>
+
+    <div id="verificationModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-content">
+        <h2>Love Verification 💌</h2>
+        <p id="verificationStatus" class="verification-status">Checking vibes…</p>
+        <div class="progress-wrap">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+
+        <div id="step1" class="step active-step">
+          <p>1) Who is cutest?</p>
+          <label><input type="radio" name="cutest" value="heer" /> Heer</label>
+          <label><input type="radio" name="cutest" value="uzzii" /> Uzzii</label>
+          <label><input type="radio" name="cutest" value="both" /> Both together 💞</label>
+        </div>
+
+        <div id="step2" class="step">
+          <p>2) How much do you miss Uzzii?</p>
+          <input id="missSlider" type="range" min="0" max="100" value="50" />
+          <p><span id="sliderValue">50</span>%</p>
+        </div>
+
+        <div id="step3" class="step">
+          <p>3) Tap 7 floating hearts to continue 💗</p>
+          <div id="heartGame" class="heart-game"></div>
+          <p>Tapped: <span id="heartCount">0</span>/7</p>
+        </div>
+
+        <div id="step4" class="step">
+          <p>4) Type the magic line:</p>
+          <p class="hint">I choose Uzzii</p>
+          <input id="magicInput" type="text" placeholder="Type here..." />
+        </div>
+
+        <div id="step5" class="step">
+          <p>5) Final checkpoint unlocked ✨</p>
+          <button id="unlockBtn" class="btn yes-btn" type="button">Unlock message 💘</button>
+        </div>
+
+        <div class="modal-actions">
+          <button id="nextStepBtn" class="btn yes-btn" type="button">Next ➜</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="heartLayer" class="heart-layer" aria-hidden="true"></div>
+    <div id="easterEgg" class="easter-egg">Uzzheer 💕</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
