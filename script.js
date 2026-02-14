@@ -302,3 +302,23 @@ document.addEventListener("touchend", registerTap, { passive: true });
 window.addEventListener("resize", placeInitialButtons);
 
 placeInitialButtons();
+/* --- Floating hearts background --- */
+
+const floatingContainer = document.querySelector(".floating-hearts");
+
+function createFloatingHeart() {
+  const heart = document.createElement("span");
+  heart.textContent = "💖";
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = 4 + Math.random() * 6 + "s";
+  heart.style.fontSize = 14 + Math.random() * 20 + "px";
+
+  floatingContainer.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 10000);
+}
+
+setInterval(createFloatingHeart, 500);
