@@ -184,7 +184,7 @@ function validateStep() {
   }
 
   if (currentStep === 3) {
-    return magicInput.value.trim().toLowerCase() === "i choose uzzii";
+    return magicInput.value.trim().toLowerCase().replace(/\s+/g, " ") === "i love you uzzii";
   }
 
   return true;
